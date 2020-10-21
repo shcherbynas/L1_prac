@@ -1,15 +1,15 @@
 <?php include "topbit.php";
 
 // if find button pushed...
-if(isset($_POST['find_title']))
+if(isset($_POST['find_author']))
 {     
-  // retrieves title and sanitises it.
+  // retrieves author and sanitises it.
     
-$title = test_input(mysqli_real_escape_string($dbconnect, $_POST['title']));
+$author = test_input(mysqli_real_escape_string($dbconnect, $_POST['author']));
     
 $find_sql="SELECT *
 FROM `L1_prac_books`
-WHERE `Title` LIKE '%$title%'
+WHERE `Author` LIKE '%$author%'
 LIMIT 0 , 30";
 $find_query=mysqli_query($dbconnect, $find_sql);
 $find_rs=mysqli_fetch_assoc($find_query);
@@ -18,7 +18,7 @@ $count=mysqli_num_rows($find_query);
 ?>     
         
 <div class="box main">
-            <h2>Title search</h2>
+            <h2>Author search</h2>
             
             <?php
             

@@ -6,6 +6,7 @@
 
     session_start();
     include("config.php");
+    include("functions.php"); // include data sanitising
     // Connect to database
     
     $dbconnect=mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -68,11 +69,45 @@
             
             
         </form>
+        
+        <br />
         <!-- End of Title Search -->
         
+        <!-- Start of Author Serach -->
+        <form method="post" action="author_search.php" enctype="multipart/form-data">
+            
+            <input class="search" type="text" name="author" size="40" value="" required placeholder="Author..."/>
+            
+            <input class="submit" type="submit" name="find_author" value="Search" />
+            
+            
+        </form>
+        
+        <br />
+        <!-- End of Author Search -->
+        
+        <!-- Start of Genre Serach -->
+        <form method="post" action="genre_search.php" enctype="multipart/form-data">
+            
+            <select name="genre" required>
+                <option value="" disabled selected>Genre...</option>
+                <option value="Sci Fi">Science Fiction</option>
+                <option value="Historical Fiction">Historical Fiction</option>
+                <option value="Humour">Humour</option>
+                <option value="Non Fiction">Non Fiction</option>
+                
+                
+            </select>
+            
+            <input class="submit" type="submit" name="find_genre" value="Search" />
+            
+            
+        </form>
+        
+        <br />
+        <!-- End of Genre Search -->
+        
         <hr />
-        Author Search <br/>
-        Genre Search <br/>
         Rating Search <br/>
 	</div> <!-- / side bar  -->  
         
