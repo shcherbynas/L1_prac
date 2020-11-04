@@ -107,7 +107,30 @@
         <br />
         <!-- End of Genre Search -->
         
-        <hr />
-        Rating Search <br/>
+        <!-- Start of Ratings form -->
+        <form method="post" action="rating_search.php" enctype="multipart/form-data">
+            
+            <select class="half_width" name="amount">
+                <option value="exactly" selected>Exactly...</option>
+                <option value="more">At least...</option>
+                <option value="less">At most...</option>      
+            </select>
+            
+            <select class="half_width" name="stars">
+                <option value=1>&#9733;</option>
+                <option value=2>&#9733;&#9733;</option>
+                <option value=3>&#9733;&#9733;&#9733;</option>
+                <option value=4>&#9733;&#9733;&#9733;&#9733;</option>
+                <option value=5>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+            </select>
+            
+            <input class="submit" type="submit" name="find_rating" value="Search" />
+            
+            
+        </form>
+        
+        <br />
+        <!-- End of Ratings form -->
+        
 	</div> <!-- / side bar  -->  
         

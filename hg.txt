@@ -1,0 +1,20 @@
+        <!-- Start of rating Serach -->
+        <form method="post" action="rating_search.php" enctype="multipart/form-data">
+            
+            <select name="rating" required>
+                <option value="" disabled selected>rating...</option>
+                <option value="Sci Fi">Science Fiction</option>
+                <option value="Historical Fiction">Historical Fiction</option>
+                <option value="Humour">Humour</option>
+                <option value="Non Fiction">Non Fiction</option>
+                
+                
+            </select>
+            
+            <input class="submit" type="submit" name="find_rating" value="Search" />
+            
+            
+        </form>
+        
+        <br />
+        <!-- End of rating Search -->
